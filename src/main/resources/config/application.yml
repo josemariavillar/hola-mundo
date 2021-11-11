@@ -1,0 +1,36 @@
+es:
+  santander:
+    nuar:
+      name: hola-mundo
+      logging:
+        logLevel:
+          root: INFO
+        technical:
+          package: es.santander.nuar.holamundo
+        functional:
+          active: false
+          loggedEndpoints: '/hello'
+        activity: true
+        appKey: nuar
+        environment: TEST
+        system: sys
+        subsystem: subsys
+        application: application
+        subapplication: subapp
+        paasproject: @project.version@
+        paasAppVersion: "@project.version@"
+      util:
+        security:
+          remoteKeyServerURL: https://apisistema-san-servicios-comunes-dev.appls.boaw.paas.gsnetcloud.corp/pkm/v1/publicKey
+          remoteSTSURI: https://apisistema-san-servicios-comunes-dev.appls.boaw.paas.gsnetcloud.corp/sts
+          whiteList:
+            - /admin/health
+          authorization:
+            remote:
+              coc: "https://operational-security-ops-sign-pattern-dev.appls.boaw.paas.gsnetcloud.corp/opesec/channel"
+              con: "https://operational-security-ops-sign-pattern-dev.appls.boaw.paas.gsnetcloud.corp/opesec/contract"
+
+management:
+  context-path: /admin
+  security:
+    enabled: false
